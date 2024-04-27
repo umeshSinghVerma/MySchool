@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+  <meta http-equiv='cache-control' content='no-cache'>
+  <meta http-equiv='expires' content='0'>
+  <meta http-equiv='pragma' content='no-cache'>
+  <TITLE>WebGazer Demo</TITLE>
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" type="text/css" href="./css/question_style.css"> -->
+  <script async type="text/javascript" src="./webgazer.js"></script>
+  <style>
+    /* The Modal (background) */
+    .modall {
+      display: none;
+      /* Hidden by default */
+      position: absolute;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 100px;
+      /* Location of the box */
+      left: 460px;
+      top: 120px;
+      width: 400;
+      /* Full width */
+      height: 300;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+    }
+
+    /* The Close Button */
+    .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body LANG="en-US" LINK="#0000ff" DIR="LTR">
+  <canvas id="plotting_canvas" width="500" height="500" style="cursor:crosshair;"></canvas>
+
+  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="./node_modules/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="./node_modules/localforage/dist/localforage.js"></script>
+
+  <script src="./js/main.js?2"></script>
+  <script src="./js/calibration.js"></script>
+  <script src="./js/precision_calculation.js"></script>
+  <script src="./js/precision_store_points.js"></script>
+
+
+  <div id="myModal" class="modall">
+
+
+    <div class="modal-content">
+      <span class="close">Continue</span>
+      <p>You doesn't seem to pay attention</p>
+    </div>
+
+  </div>
+  <div id="result"></div>
+  <div class="coordinates" style="display:none;">
+    x:<span id="x-coordinate"></span>
+    y:<span id="y-coordinate"></span>
+  </div>
+  <!-- <iframe style="position:absolute;top:0px;left:0px;height:100vh;width:100vw;" name="iframe_a"
+    src="https://meet-cast.whereby.com/24ef1133-777e-47db-bc11-e30144d8df7b" allow="camera;microphone" id="f"></iframe> -->
+    <iframe
+    className='w-full my-5'
+    style="aspect-ratio: 16 / 9;position:absolute;top:0px;left:0px;height:100vh;width:100vw;border:none;"
+    src="https://www.youtube.com/embed/pOOnrbXVmUU?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0&enablejsapi=1">
+</iframe>
+  <button type="button" id="cc" onclick="showResult()" class="btn btn-primary"
+    style="position:absolute;top:600px;left:0px;width:100px;">See result</button>
+  <script src="./js/resize_canvas.js"></script>
+  <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script>
+    var fr = document.getElementById("bb");
+    fr.onclick = function () {
+      document.getElementById("f").style.display = "block";
+    }
+    function showResult() {
+      window.document.location = '/result';
+    }
+  </script>
+
+</body>
+
+</html>
