@@ -34,6 +34,9 @@ app.get("/calender", function (req, res) {
 app.get("/signup", function (req, res) {
   res.sendFile(__dirname + "/signup.html");
 });
+app.get("/quiz", function (req, res) {
+  res.sendFile(__dirname + "/quiz.html");
+});
 
 //starting server
 app.listen(port, function () {
