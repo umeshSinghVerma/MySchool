@@ -1,7 +1,7 @@
 # Welcome to My School 🏫
 <p align="center">
- <img src="https://github.com/umeshSinghVerma/MySchool/blob/master/Screenshots/landing%20page.png?raw=true" alt="quiz" width="90%"/> 
- <img src="https://github.com/umeshSinghVerma/MySchool/blob/master/Screenshots/Specifications.png?raw=true" alt="quiz-score"  width="90%"/>
+ <img src="https://github.com/umeshSinghVerma/MySchool/blob/master/Screenshots/landing%20page.png?raw=true" alt="quiz"/> 
+ <img src="https://github.com/umeshSinghVerma/MySchool/blob/master/Screenshots/Specifications.png?raw=true" alt="quiz-score"/>
 </p>
 
 
