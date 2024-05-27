@@ -93,9 +93,6 @@ To get started with My School
 
 ## Contributors
 
-The following individuals have contributed to the EZCompose project:
-
-
 ### [Umesh Singh Verma](https://github.com/umeshSinghVerma)
 
  - Role: Full Stack Developer
